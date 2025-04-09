@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone 16</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <header>
-        <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="header-text">
-            <h1>John Risen I. Repayo </h1>
-            <p>A passionate developer creating awesome projects.</p>
-            <a href="#projects" class="btn">View My Work</a>
+  <!-- Back Button -->
+  <div class="container mt-3">
+    <button class="btn btn-secondary back-button" onclick="window.history.back()">Back</button>
+  </div>
+
+  <section class="hero text-center">
+    <h1>Introducing iPhone 16</h1>
+    <p>The future is in your hands.</p>
+  </section>
+
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="iphone16 front view.jpg" class="card-img-top" alt="iPhone 16 Image 1">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 - Front View</h5>
+            <p class="card-text">Experience the sleek design with a stunning front view.</p>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <section id="about" class="about">
-        <h2>About Me:</h2>
-        <p>I'm John risen your developer who loves solving problems through technology.</p>
-    </section>
-
-    <section id="projects" class="projects">
-        <h2>My Projects:</h2>
-        <ul>
-            <li><a href="A04/index.html">A04</a></li>  
-            <li><a href="#">Project 2</a></li>
-            <li><a href="#">Project 3</a></li>
-        </ul>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Me:</h2>
-        <p>Email: <a href="johnrisen97@gmail.com">johnrisen97@gmail.com</a></p>
-        <p>Follow me on:</p>
-        <div class="social-links">
-            <a href="https://instagram.com/_sinetsen" class="btn">Instagram</a>
-            <a href="https://facebook.com/john risen repayo" class="btn">Facebook</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">Twitter</a>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="iphone16 back view.jpg" class="card-img-top" alt="iPhone 16 Image 2">
+          <div class="card-body">   
+            <h5 class="card-title">iPhone 16 - Back View</h5>
+            <p class="card-text">See the beautiful back design and camera setup.</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <p>2025 My GitHub Page</p>
-    </footer>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="iphone16 side view.jpg" class="card-img-top" alt="iPhone 16 Image 3">
+          <div class="card-body">
+            <h5 class="card-title">iPhone 16 - Side View</h5>
+            <p class="card-text">Get a closer look at the sleek side profile of the iPhone 16.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features container text-center">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h4> A18 Bionic Chip</h4>
+        <p>Blazing fast performance for everything you do.</p>
+      </div>
+      <div class="col-md-4">
+        <h4> 108MP Camera</h4>
+        <p>Next-gen photography with ultra clarity.</p>
+      </div>
+      <div class="col-md-4">
+        <h4> 48-Hour Battery</h4>
+        <p>Power that lasts longer than ever.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5 text-center">
+    <h2>Now with USB-C & AI Features</h2>
+    <p>Say hello to smarter, faster, and more connected experiences.</p>
+    <a href="https://apple.com" target="_blank" class="btn btn-dark mt-3">Learn More</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Apple Inc. | Concept Page for iPhone 16</p>
+  </footer>
 
 </body>
 </html>
