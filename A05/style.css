@@ -1,0 +1,22 @@
+header {
+    background-color: maroon;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer {
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; 
+}
