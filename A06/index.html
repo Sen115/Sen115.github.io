@@ -1,85 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simple Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    .gallery-img, .gallery-video {
+    .gallery-img,
+    .gallery-video {
       height: 200px;
       width: 100%;
       object-fit: cover;
       transition: transform 0.3s;
     }
-    .gallery-card:hover .gallery-img, .gallery-card:hover .gallery-video {
+    .gallery-card:hover .gallery-img,
+    .gallery-card:hover .gallery-video {
       transform: scale(1.1);
     }
     #backButton {
       position: fixed;
       bottom: 20px;
       left: 20px;
+      z-index: 1050;
+    }
+    #darkModeToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+    }
+
+    /* DARK MODE STYLES */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      border-color: #333;
+    }
+    body.dark-mode .card-title {
+      color: #e0e0e0;
+    }
+    body.dark-mode #extraInfo {
+      color: #ccc;
+    }
+    body.dark-mode .btn-primary {
+      background-color: #bb86fc;
+      border-color: #bb86fc;
+    }
+    body.dark-mode .btn-secondary {
+      background-color: #333;
+      border-color: #444;
+      color: #ccc;
+    }
+    body.dark-mode .btn-primary:hover {
+      background-color: #9a67ea;
+      border-color: #9a67ea;
+    }
+    body.dark-mode .btn-secondary:hover {
+      background-color: #555;
+      border-color: #666;
+      color: #eee;
     }
   </style>
 </head>
 <body>
+  <button id="backButton" class="btn btn-secondary" onclick="goBack()">Back</button>
+  <button id="darkModeToggle" class="btn btn-primary" onclick="toggleDarkMode()">Dark Mode</button>
 
-<button id="backButton" class="btn btn-secondary" onclick="goBack()">Back</button>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">My Gallery</h1>
 
-<div class="container py-5">
-  <h1 class="text-center mb-4">My Gallery</h1>
+    <div id="gallery" class="row g-4 mb-5"></div>
 
-  <div id="gallery" class="row g-4 mb-5"></div>
-
-  <div class="text-center mb-4">
-    <button class="btn btn-primary" onclick="toggleInfo()">Show/Hide Info</button>
-  </div>
-
-  <div id="extraInfo" class="text-center collapse mb-5">
-    <p>This gallery displays my images and videos.</p>
-  </div>
-</div>
-
-<script>
-const items = [
-  { src: 'photo1.jpg', title: 'My Photo' },
-  { src: 'photo2.jpg', title: 'Camera' },
-  { src: 'photo3.jpg', title: 'Beach' },
-  { src: 'photo4.jpg', title: 'Sunset' },
-  { src: 'photo5.jpg', title: 'Download' },
-  { src: 'video.mp4', title: 'Sample Video' }
-];
-
-const gallery = document.getElementById('gallery');
-items.forEach((item) => {
-  const col = document.createElement('div');
-  col.className = 'col-sm-6 col-md-4';
-  
-  const media = item.src.endsWith('.mp4') 
-    ? `<video class="card-img-top gallery-video" controls><source src="${item.src}" type="video/mp4"></video>`
-    : `<img src="${item.src}" class="card-img-top gallery-img" alt="${item.title}">`;
-
-  col.innerHTML = `
-    <div class="card gallery-card">
-      ${media}
-      <div class="card-body">
-        <h5 class="card-title">${item.title}</h5>
-      </div>
+    <div class="text-center mb-4">
+      <button class="btn btn-primary" onclick="toggleInfo()">Show/Hide Info</button>
     </div>
-  `;
-  gallery.appendChild(col);
-});
 
-function toggleInfo() {
-  const info = document.getElementById('extraInfo');
-  info.classList.toggle('show');
-}
+    <div id="extraInfo" class="text-center collapse mb-5">
+      <p>This gallery displays my images and videos.</p>
+    </div>
+  </div>
 
-function goBack() {
-  window.history.back();
-}
-</script>
+  <script>
+    const items = [
+      { src: 'photo1.jpg', title: 'My Photo' },
+      { src: 'photo2.jpg', title: 'Camera' },
+      { src: 'photo3.jpg', title: 'Beach' },
+      { src: 'photo4.jpg', title: 'Sunset' },
+      { src: 'photo5.jpg', title: 'Download' },
+      { src: 'video.mp4', title: 'Sample Video' },
+    ];
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    const gallery = document.getElementById('gallery');
+    items.forEach((item) => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-6 col-md-4';
+
+      const media = item.src.endsWith('.mp4')
+        ? `<video class="card-img-top gallery-video" controls><source src="${item.src}" type="video/mp4"></video>`
+        : `<img src="${item.src}" class="card-img-top gallery-img" alt="${item.title}">`;
+
+      col.innerHTML = `
+        <div class="card gallery-card">
+          ${media}
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+          </div>
+        </div>
+      `;
+      gallery.appendChild(col);
+    });
+
+    function toggleInfo() {
+      const info = document.getElementById('extraInfo');
+      info.classList.toggle('show');
+    }
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+
+      
+      const btn = document.getElementById('darkModeToggle');
+      if (body.classList.contains('dark-mode')) {
+        btn.textContent = 'Light Mode';
+      } else {
+        btn.textContent = 'Dark Mode';
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -576,42 +576,27 @@
                 "photoUrl": "https://vignette.wikia.nocookie.net/avatar/images/4/45/Music_teacher.png/revision/latest?cb=20140602125803",
                 "name": "Fire Nation music teacher",
                 "affiliation": "Fire Nation school"
-            }
-
+            },
         ]
 
 
         const getAvatarCharacter = () => {
-            const input = document.getElementById("avatarNameSearch").value.trim().toLowerCase();
-            const resultContainer = document.getElementById("avatarMainContainer");
-            const nameDisplay = document.getElementById("name");
-            const affiliationDisplay = document.getElementById("affiliation");
-            const alliesDisplay = document.getElementById("allies");
-            const enemiesDisplay = document.getElementById("enemies");
-            const imageDisplay = document.getElementById("img");
+    const input = document.getElementById("avatarNameSearch").value.trim().toLowerCase();
+    if (!input) {
+        alert("Please enter a character name.");
+        return;
+    }
 
-            if (!input) {
-                alert("Please enter a character name.");
-                return;
-            }
+    const character = avatarCharacters.find(c => c.name.toLowerCase() === input);
+    if (!character) {
+        alert("Character not found. Try names like Chong, Arnook, etc.");
+        return;
+    }
 
-            const character = avatarCharacters.find(c => c.name.toLowerCase() === input);
+    const encodedName = encodeURIComponent(character.name);
+    window.location.href = `view.html?name=${encodedName}`;
+};
 
-            if (!character) {
-                resultContainer.style.display = "none";
-                alert("Character not found. Try names like Chong, Arnook, etc.");
-                return;
-            }
-
-            nameDisplay.textContent = character.name;
-            affiliationDisplay.textContent = `Affiliation: ${character.affiliation || 'Unknown'}`;
-            alliesDisplay.textContent = `Allies: ${character.allies?.join(', ') || 'None'}`;
-            enemiesDisplay.textContent = `Enemies: ${character.enemies?.join(', ') || 'None'}`;
-            imageDisplay.src = character.photoUrl;
-
-
-            resultContainer.style.display = "block";
-        };
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
