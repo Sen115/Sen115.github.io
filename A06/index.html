@@ -55,7 +55,7 @@
 <body class="light-mode">
 
 <button id="backButton" class="btn btn-secondary" onclick="goBack()">Back</button>
-<button id="themeToggle" class="btn btn-dark" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+<button id="themeToggle" class="btn btn-dark" onclick="toggleTheme()">Dark/Light Mode</button>
 
 <div class="container py-5">
   <h1 class="text-center mb-4">My Gallery</h1>
@@ -101,18 +101,15 @@ items.forEach((item) => {
   gallery.appendChild(col);
 });
 
-// Toggle info section
 function toggleInfo() {
   const info = document.getElementById('extraInfo');
   info.classList.toggle('show');
 }
 
-// Go back button
 function goBack() {
   window.history.back();
 }
 
-// Theme toggle logic
 function toggleTheme() {
   const body = document.body;
   const cards = document.querySelectorAll('.gallery-card');
@@ -126,7 +123,6 @@ function toggleTheme() {
     card.classList.toggle('light-mode', isDark);
   });
 
-  // Change button class
   const btn = document.getElementById('themeToggle');
   if (isDark) {
     btn.classList.remove('btn-light');

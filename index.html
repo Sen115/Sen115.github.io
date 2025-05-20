@@ -4,25 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Page</title>
-
-  <!-- 1. Bootstrap CSS first -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- 2. Then your custom styles -->
+  <title>My GitHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <nav>
-    <ul>
+  <nav class="d-flex justify-content-between align-items-center px-4">
+    <ul class="d-flex list-unstyled m-0 gap-4 align-items-center">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="modeToggle" class="btn btn-outline-light btn-sm">Dark Mode</button>
   </nav>
 
   <header>
@@ -36,15 +30,13 @@
 
   <section id="about" class="about">
     <h2>About Me:</h2>
-    <p>I'm John Risen, your developer who loves solving problems through technology.</p>
+    <p>I'm John Risen, a developer who loves solving problems through technology.</p>
   </section>
 
   <section id="projects" class="projects">
     <h2>My Projects:</h2>
     <div class="container">
-      <div class="row justify-content-center" id="container-row">
-        <!-- Cards will be injected here -->
-      </div>
+      <div class="row justify-content-center" id="container-row"></div>
     </div>
 
     <script>
@@ -85,8 +77,26 @@
   </section>
 
   <footer>
-    <p>2025 My GitHub Page</p>
+    <p>© 2025 My GitHub Page</p>
   </footer>
+
+  <script>
+    const modeToggle = document.getElementById('modeToggle');
+    const body = document.body;
+
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        modeToggle.textContent = 'Light Mode';
+        modeToggle.classList.remove('btn-outline-light');
+        modeToggle.classList.add('btn-outline-dark');
+      } else {
+        modeToggle.textContent = 'Dark Mode';
+        modeToggle.classList.remove('btn-outline-dark');
+        modeToggle.classList.add('btn-outline-light');
+      }
+    });
+  </script>
 </body>
 
 </html>
