@@ -2,62 +2,91 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Page</title>
+
+  <!-- 1. Bootstrap CSS first -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- 2. Then your custom styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <header>
+    <img src="photo.jpg" alt="Profile Picture" class="profile-pic" />
+    <div class="header-text">
+      <h1>John Risen I. Repayo</h1>
+      <p>A passionate developer creating awesome projects.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </header>
 
-    <header>
-        <img src="photo.jpg" alt="Profile Picture" class="profile-pic">
-        <div class="header-text">
-            <h1>John Risen I. Repayo </h1>
-            <p>A passionate developer creating awesome projects.</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
-    </header>
+  <section id="about" class="about">
+    <h2>About Me:</h2>
+    <p>I'm John Risen, your developer who loves solving problems through technology.</p>
+  </section>
 
-    <section id="about" class="about">
-        <h2>About Me:</h2>
-        <p>I'm John risen your developer who loves solving problems through technology.</p>
-    </section>
+  <section id="projects" class="projects">
+    <h2>My Projects:</h2>
+    <div class="container">
+      <div class="row justify-content-center" id="container-row">
+        <!-- Cards will be injected here -->
+      </div>
+    </div>
 
-    <section id="projects" class="projects">
-        <h2>My Projects:</h2>
-        <ul>
-            <li><a href="A04/index.html">A04</a></li>
-            <li><a href="A05/index.html">A05</a></li>
-            <li><a href="A06/index.html">A06</a></li>
-            <li><a href="A07/index.html">A07</a></li>
-        </ul>
-    </section>
+    <script>
+      const titles = ["Iphone16", "PUP Sto.Tomas Batangas", "IMAGES", "Avatar API"];
+      const pictures = ["Iphone16.jpg", "PUP.jpg", "images.jpg", "Avatar the last airbender.jpg"];
+      const contents = ["Description for A04", "Description for A05", "Description for A06", "Description for A07"];
+      const links = ["A04/index.html", "A05/index.html", "A06/index.html", "A07/index.html"];
 
-    <section id="contact" class="contact">
-        <h2>Contact Me:</h2>
-        <p>Email: <a href="johnrisen97@gmail.com">johnrisen97@gmail.com</a></p>
-        <p>Follow me on:</p>
-        <div class="social-links">
-            <a href="https://instagram.com/_sinetsen" class="btn">Instagram</a>
-            <a href="https://facebook.com/john risen repayo" class="btn">Facebook</a>
-            <a href="#" class="btn">GitHub</a>
-            <a href="#" class="btn">Twitter</a>
-        </div>
-    </section>
+      const row = document.getElementById("container-row");
 
-    <footer>
-        <p>2025 My GitHub Page</p>
-    </footer>
+      for (let i = 0; i < titles.length; i++) {
+        row.innerHTML += `
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
+            <div class="card shadow rounded-4 my-3 w-100">
+              <img src="${pictures[i]}" class="card-img-top" alt="${titles[i]}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">${titles[i]}</h5>
+                <p class="card-text">${contents[i]}</p>
+                <a href="${links[i]}" class="btn btn-primary mt-auto">View Project</a>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    </script>
+  </section>
 
+  <section id="contact" class="contact">
+    <h2>Contact Me:</h2>
+    <p>Email: <a href="mailto:johnrisen97@gmail.com">johnrisen97@gmail.com</a></p>
+    <p>Follow me on:</p>
+    <div class="social-links">
+      <a href="https://instagram.com/_sinetsen" class="btn">Instagram</a>
+      <a href="https://facebook.com/john risen repayo" class="btn">Facebook</a>
+      <a href="#" class="btn">GitHub</a>
+      <a href="#" class="btn">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>2025 My GitHub Page</p>
+  </footer>
 </body>
 
 </html>

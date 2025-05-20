@@ -1,385 +1,155 @@
-body {
-    background-color: #f8f9fa;
+* {
+  scroll-behavior: smooth;
 }
-
-.hero {
-    background: linear-gradient(to top left, #000000 50%, #000000 50%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero img {
-    max-width: 300px;
-}
-
-.features {
-    padding: 40px 20px;
-}
-
-.footer {
-    background-color: #212529;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; 
-}
-
-
-
-
 
 body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 nav {
-    background: #222;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  background: #222;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+  color: #007BFF;
 }
 
 header {
-    background: linear-gradient(to right, #000000, #0056b3);
-    color: white;
-    padding: 60px 20px;
-    padding-top: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: left;
+  background: linear-gradient(to right, #000000, #0056b3);
+  color: white;
+  padding: 60px 20px;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: left;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
 }
 
 .header-text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-text h1 {
-    font-size: 28px;
-    margin: 0;
+  font-size: 28px;
+  margin: 0;
 }
 
 .header-text p {
-    font-size: 18px;
-    margin: 8px 0;
+  font-size: 18px;
+  margin: 8px 0;
 }
 
 .btn {
-    background: white;
-    color: #007BFF;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+  background: white;
+  color: #007BFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
 .btn:hover {
-    background: #0056b3;
-    color: white;
+  background: #0056b3;
+  color: white;
 }
 
 section {
-    margin: 60px auto;
-    padding: 20px;
-    max-width: 600px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 60px auto;
+  padding: 20px;
+  max-width: 1100px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about h2,
 .projects h2,
+.about h2,
 .contact h2 {
-    font-size: 24px;
-    color: #222;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 20px;
 }
 
-.about p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-.projects ul li {
-    margin: 10px 0;
-}
-
-.projects ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.projects ul li a:hover {
-    text-decoration: underline;
-}
-
+.about p,
 .contact p {
-    font-size: 18px;
-    margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #555;
 }
 
 footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 50px;
-=======
-body {
-    background-color: #f8f9fa;
-}
-
-.hero {
-    background: linear-gradient(to top left, #000000 50%, #000000 50%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.hero img {
-    max-width: 300px;
-}
-
-.features {
-    padding: 40px 20px;
-}
-
-.footer {
-    background-color: #212529;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-.back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; 
-}
-
-
-
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-nav {
-    background: #222;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #007BFF;
-}
-
-header {
-    background: linear-gradient(to right, #000000, #0056b3);
-    color: white;
-    padding: 60px 20px;
-    padding-top: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    text-align: left;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 4px solid white;
-}
-
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-text h1 {
-    font-size: 28px;
-    margin: 0;
-}
-
-.header-text p {
-    font-size: 18px;
-    margin: 8px 0;
-}
-
-.btn {
-    background: white;
-    color: #007BFF;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0056b3;
-    color: white;
-}
-
-section {
-    margin: 60px auto;
-    padding: 20px;
-    max-width: 600px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about h2,
-.projects h2,
-.contact h2 {
-    font-size: 24px;
-    color: #222;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.projects ul {
-    list-style: none;
-    padding: 0;
-}
-
-.projects ul li {
-    margin: 10px 0;
-}
-
-.projects ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.projects ul li a:hover {
-    text-decoration: underline;
-}
-
-.contact p {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-footer {
-    background: #222;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 50px;
->>>>>>> f0d35c1 (Update: Change layout and fix dark mode)
+  background: #222;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 50px;
 }
