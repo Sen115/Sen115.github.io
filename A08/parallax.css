@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.keyart {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.keyart_layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+/* Layers */
+#keyart-0 { background-image: url('parallax0.png'); }
+#keyart-1 { background-image: url('parallax1.png'); }
+#keyart-2 { background-image: url('parallax2.png'); }
+#keyart-3 { background-image: url('parallax3.png'); }
+#keyart-4 { background-image: url('parallax4.png'); }
+#keyart-5 { background-image: url('parallax5.png'); }
+#keyart-6 { background-image: url('parallax6.png'); }
+#keyart-7 { background-image: url('parallax7.png'); }
+#keyart-8 { background-image: url('parallax8.png'); }

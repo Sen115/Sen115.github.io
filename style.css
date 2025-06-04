@@ -11,7 +11,7 @@ body {
   color: #333;
   transition: background-color 0.3s, color 0.3s;
   margin: 0;
-  padding: 0; 
+  padding: 0;
   text-align: center;
 }
 
@@ -225,9 +225,5 @@ body.dark-mode a:hover {
     align-items: center;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
+
 }
