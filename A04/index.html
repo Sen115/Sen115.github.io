@@ -3,82 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>iPhone 16</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>iPhone 16 | Student Concept</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container mt-3">
-    <button class="btn btn-secondary back-button" onclick="window.history.back()">Back</button>
-  </div>
+  <a href="../index.html" class="back-button" aria-label="Go back">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </a>
 
-  <section class="hero text-center">
-    <h1>Introducing iPhone 16</h1>
-    <p>The future is in your hands.</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">iPhone 16 Concept</h1>
+    </div>
   </section>
 
-  <section class="container my-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="iphone16 front view.jpg" class="card-img-top" alt="iPhone 16 Image 1">
-          <div class="card-body">
-            <h5 class="card-title">iPhone 16 - Front View</h5>
-            <p class="card-text">Experience the sleek design with a stunning front view.</p>
+  <section class="content-section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="iphone16 front view.jpg" alt="iPhone 16 Front View">
+          <div class="gallery-text">
+            <h5>Dynamic Island</h5>
+            <p>This screen is super smooth and responsive – perfect for videos, gaming, or even note-taking.</p>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="iphone16 back view.jpg" class="card-img-top" alt="iPhone 16 Image 2">
-          <div class="card-body">   
-            <h5 class="card-title">iPhone 16 - Back View</h5>
-            <p class="card-text">See the beautiful back design and camera setup.</p>
+        <div class="gallery-item">
+          <img src="iphone16 back view.jpg" alt="iPhone 16 Back View">
+          <div class="gallery-text">
+            <h5>Camera Upgrade</h5>
+            <p>Designed with a vertical setup to shoot videos that feel like they’re from the future.</p>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img src="iphone16 side view.jpg" class="card-img-top" alt="iPhone 16 Image 3">
-          <div class="card-body">
-            <h5 class="card-title">iPhone 16 - Side View</h5>
-            <p class="card-text">Get a closer look at the sleek side profile of the iPhone 16.</p>
+        <div class="gallery-item">
+          <img src="iphone16 side view.jpg" alt="iPhone 16 Side View">
+          <div class="gallery-text">
+            <h5>Action Button</h5>
+            <p>Shortcut to your favorite feature—whether it’s the flashlight, camera, or even Notes app.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="features container text-center">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <h4> A18 Bionic Chip</h4>
-        <p>Blazing fast performance for everything you do.</p>
-      </div>
-      <div class="col-md-4">
-        <h4> 108MP Camera</h4>
-        <p>Next-gen photography with ultra clarity.</p>
-      </div>
-      <div class="col-md-4">
-        <h4> 48-Hour Battery</h4>
-        <p>Power that lasts longer than ever.</p>
-      </div>
+  <section class="content-section features-bg">
+    <div class="container text-center">
+        <h2 class="section-title">Tech that’s future-ready.</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                <h4>A18 Bionic Chip</h4>
+                <p>Handles gaming, editing, and multitasking—basically, anything a student might throw at it.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                <h4>108MP Camera</h4>
+                <p>Take photos of your school projects or TikTok-ready videos in super high detail.</p>
+            </div>
+            <div class="feature-item">
+                <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19"></path><line x1="23" y1="13" x2="23" y2="11"></line><path d="M1 12h.01"></path></svg>
+                <h4>All-Day Battery</h4>
+                <p>Study, scroll, and stream without worrying about the charger all day.</p>
+            </div>
+        </div>
     </div>
   </section>
 
-  <section class="container my-5 text-center">
-    <h2>Now with USB-C & AI Features</h2>
-    <p>Say hello to smarter, faster, and more connected experiences.</p>
-    <a href="https://apple.com" target="_blank" class="btn btn-dark mt-3">Learn More</a>
+  <section class="content-section text-center">
+    <div class="container">
+      <h2 class="section-title">Smarter connections.</h2>
+      <p class="section-subtitle">With USB-C and built-in AI, this concept design is meant to help students stay connected and creative.</p>
+      <a href="https://apple.com" target="_blank" class="cta-button">Explore More</a>
+    </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Apple Inc. | Concept Page for iPhone 16</p>
+    <p>© 2025 Student Project Only. This concept is for educational and presentation use.</p>
   </footer>
 
 </body>
 </html>
-
